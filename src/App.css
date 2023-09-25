@@ -1,0 +1,530 @@
+*{
+  font-family: 'Montserrat', sans-serif;
+}
+
+body{
+  background: linear-gradient(147deg, #000000 0%, #04619f 74%);
+  background-size: 400% 400%;
+  animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+.first-first-section{
+  background-color: whitesmoke;
+  margin: 100px;
+  border-radius: 20px;
+  padding-top: 15vh;
+
+  @media only screen and (max-width: 600px){
+    margin: 40px;
+  }
+}
+
+.first-section {
+  background-color: whitesmoke;
+  margin: 100px;
+  border-radius: 20px;
+
+  @media only screen and (max-width: 600px){
+    margin: 40px;
+  }
+}
+
+.inner-first-section{
+  padding: 7%;
+
+  @media only screen and (max-width: 600px){
+    padding: 10%;
+}
+}
+
+h1{
+  font-size: 4rem;
+  line-height: 4rem;
+  margin: 0px;
+}
+
+p{
+  line-height: 1.5em;
+  font-size: 1em;
+}
+
+/* CSS for desktop layout */
+.table-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+table {
+  width: 100%;
+  display: table;
+}
+
+.left-column {
+  width: 60%;
+  padding: 0px;
+}
+
+.right-column {
+  width: 40%;
+  padding: 0px;
+}
+
+@media (max-width: 768px) {
+  .right-column {
+    display: none;
+  }
+}
+
+/* CSS for mobile layout */
+@media (max-width: 768px) {
+  .table-container {
+    flex-direction: column;
+  }
+
+  .left-column,
+  .right-column {
+    width: 100%;
+    margin: 0px;
+  }
+}
+
+
+/*Button*/
+.button-1 {
+  width: 200px;
+  display:inline-block;
+  background-color: transparent;
+  border: 1px solid #04619f;
+  border-radius: 20px;
+  box-sizing: border-box;
+  color: #00132C;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 16px 23px;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+}
+
+.button-1:hover {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.button-1:before {
+  background-color: #D5EDF6;
+  content: "";
+  height: calc(100% + 3px);
+  position: absolute;
+  right: -7px;
+  top: -9px;
+  transition: background-color 300ms ease-in;
+  width: 100%;
+  z-index: -1;
+}
+
+.button-1:hover:before {
+  background-color: #6DCFF6;
+}
+
+@media (min-width: 768px) {
+  .button-51 {
+    padding: 16px 32px;
+  }
+}
+
+/* Scuba */
+.scuba {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+#background-img {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+@keyframes moveUpDown {
+  0%, 100% {
+    top: 30px; /* Starting position */
+  }
+  50% {
+    top: 0; /* Peak position */
+  }
+}
+
+#diver-img {
+  position: absolute;
+  left: 150px;
+  animation: moveUpDown 5s linear infinite; /* Adjust the animation duration as needed */
+}
+
+/* Scuba for mobile */
+.scuba-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  /* Show .scuba-mobile on mobile */
+  .scuba-mobile {
+    display: block;
+  }
+}
+
+
+/*Accordion*/
+.faq-drawer {
+  margin-bottom: 30px;
+}
+
+.faq-drawer__content-wrapper {
+  font-size: 1em;
+  line-height: 1em;
+  max-height: 0px;
+  overflow: hidden;
+  transition: 0.25s ease-in-out;
+}
+
+.faq-drawer__title {
+  border-top: #000 1px solid;
+  cursor: pointer;
+  display: block;
+  font-size: 1em;
+  font-weight: 700;
+  padding: 30px 0 0 0;
+  position: relative;
+  margin-bottom: 0;
+  transition: all 0.25s ease-out;
+}
+
+.faq-drawer__title::after {
+  border-style: solid;
+  border-width: 1px 1px 0 0;
+  content: " ";
+  display: inline-block;
+  float: right;
+  height: 10px;
+  left: 2px;
+  position: relative;
+  right: 20px;
+  top: 2px;
+  transform: rotate(135deg);
+  transition: 0.35s ease-in-out;
+  vertical-align: top;
+  width: 10px;
+}
+
+/* OPTIONAL HOVER STATE */
+.faq-drawer__title:hover { 
+  color: #4E4B52  ;
+}
+
+.faq-drawer__trigger:checked
+  + .faq-drawer__title
+  + .faq-drawer__content-wrapper {
+  max-height: 350px;
+}
+
+.faq-drawer__trigger:checked + .faq-drawer__title::after {
+  transform: rotate(-45deg);
+  transition: 0.25s ease-in-out;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .acc-container {
+    padding: 80px;
+  }
+}
+
+/* OPTIONAL HOVER STATE */
+.faq-drawer__title:hover { 
+  color: #4E4B52  ;
+}
+
+.faq-drawer__trigger:checked
+  + .faq-drawer__title
+  + .faq-drawer__content-wrapper {
+  max-height: 350px;
+}
+
+.faq-drawer__trigger:checked + .faq-drawer__title::after {
+  transform: rotate(-45deg);
+  transition: 0.25s ease-in-out;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+ 
+/* Section 2 */
+.secondfirstsection {
+  background-color: whitesmoke;
+  margin: 100px;
+  border-radius: 20px;
+
+  @media only screen and (max-width: 600px) {
+    margin: 40px;
+  }
+}
+
+/* Default styles for both columns */
+.secondrightcolumn,
+.secondleftcolumn {
+  width: 50%;
+}
+
+
+.secondrightcolumn {
+  padding: 0px 0px 0px 80px;
+
+  @media only screen and (max-width: 600px) {
+    display: none;
+}
+}
+
+/* Hide .acc-container on desktop */
+.mobile-acc {
+  display: none;
+}
+
+/* Show .acc-container on mobile */
+@media only screen and (max-width: 600px) {
+  .mobile-acc {
+    display: block;
+  }
+}
+
+.acc-container{
+  padding: 20px;
+}
+
+/* Third Section */
+.thirdrightcolumn,
+.thirdleftcolumn {
+  width: 50%;
+}
+
+.mobile-timeline{
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  /* Hide .thirdleftcolumn on mobile */
+  .thirdleftcolumn {
+    display: none;
+  }
+
+  /* Show .mobile-timeline on mobile */
+  .mobile-timeline {
+    display: block;
+  }
+}
+
+/*Timeline*/
+.history-tl-container{
+  font-family: "Roboto",sans-serif;
+width:50%;
+margin:auto;
+display:block;
+position:relative;
+
+@media only screen and (max-width: 600px) {
+  width: 90%;
+  }
+}
+.history-tl-container ul.tl{
+  margin:20px 0;
+  padding:0;
+  display:inline-block;
+
+}
+.history-tl-container ul.tl li{
+  list-style: none;
+  margin:auto;
+  margin-left:0px;
+  min-height:50px;
+  border-left:1px dashed #86D6FF;
+  padding:0 0 50px 30px;
+  position:relative;
+}
+.history-tl-container ul.tl li:last-child{ border-left:0;}
+.history-tl-container ul.tl li::before{
+  position: absolute;
+  left: -18px;
+  top: -5px;
+  content: " ";
+  border: 8px solid rgba(255, 255, 255, 0.74);
+  border-radius: 500%;
+  background: #258CC7;
+  height: 20px;
+  width: 20px;
+  transition: all 500ms ease-in-out;
+
+}
+.history-tl-container ul.tl li:hover::before{
+  border-color:  #258CC7;
+  transition: all 1000ms ease-in-out;
+}
+
+ul.tl li .item-detail{
+  font-size:12px;
+}
+
+ul.tl li .timestamp{
+  position: absolute;
+  left: -50%;
+  text-align: left;
+  font-size: 12px;
+
+  @media only screen and (max-width: 600px) {
+    position: relative;
+    left: 0;
+    }
+}
+
+.item-title{
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/*Fourth Section*/
+.column {
+  width: 100%;
+  height: 300px;
+  border-radius: 20px;
+  background: linear-gradient(147deg, #000000 0%, #04619f 74%);
+  background-size: 400% 400%;
+  animation: gradient 5s ease infinite;
+  margin-bottom: 20px; /* Add some spacing between columns */
+}
+
+/* Keyframes animation */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Define the columns within a row container */
+.row {
+  display: flex; /* Use flexbox to arrange columns */
+  flex-wrap: wrap; /* Allow columns to wrap to the next line */
+  justify-content: space-between; /* Space columns evenly */
+}
+
+/* Adjust column width for different screen sizes */
+.column1, .column2, .column3 {
+  flex-basis: calc(33.33% - 20px); /* Set column width for larger screens with spacing */
+  margin-right: 20px; /* Add spacing between columns */
+}
+
+/* Media query for smaller screens (e.g., mobile) */
+@media screen and (max-width: 767px) {
+  .column1, .column2, .column3 {
+    flex-basis: 100%; /* Make columns stack on top of each other for smaller screens */
+    margin-right: 0; /* Remove spacing between columns */
+  }
+}
+
+.column img {
+  display: block; /* Make the images block-level elements */
+  margin: 0 auto; /* Horizontally center the images within their columns */
+}
+
+/*Form*/
+form {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+  font-size: 16px;
+
+  input {
+    width: 100%;
+    height: 35px;
+    padding: 7px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid rgb(220, 220, 220);
+
+    &:focus {
+      border: 2px solid #04619f;
+    }
+  }
+
+  textarea {
+    max-width: 100%;
+    min-width: 100%;
+    width: 100%;
+    max-height: 100px;
+    min-height: 100px;
+    padding: 7px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid rgb(220, 220, 220);
+
+    &:focus {
+      border: 2px solid #04619f;
+    }
+  }
+
+  label {
+    margin-top: 1rem;
+  }
+
+  input[type="submit"] {
+    margin-top: 2rem;
+    cursor: pointer;
+    background: #04619f;
+    color: white;
+    border: none;
+  }
+}
+
+.sixth-right-column, .sixth-left-column {
+  width: 50%;
+  padding: 40px;
+}
+
+@media screen and (max-width: 600px) {
+  .sixth-right-column {
+    display: none; /* Set both columns to full width when screen width is <= 600px */
+  }
+}
+
+.mobile-form{
+  display: none;;
+}
+
+@media screen and (max-width: 600px) {
+  .mobile-form {
+    display: block;
+  }
+}
