@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/portfolio_23/static/css/main.bb051cf8.css",
+    "main.js": "/portfolio_23/static/js/main.36df06be.js",
+    "static/media/akshwedsnamzlogo.svg": "/portfolio_23/static/media/akshwedsnamzlogo.f93d1467e97966951c3730cdfc2a78f3.svg",
+    "static/media/background.svg": "/portfolio_23/static/media/background.e965ad7d829d50771e8b788ef7e0da34.svg",
+    "static/media/wfc.svg": "/portfolio_23/static/media/wfc.a5a61bcb352f26780834f4aca30040ba.svg",
+    "static/media/scuba-diver.svg": "/portfolio_23/static/media/scuba-diver.1d3ce67ef2aa71548fe8be6d76335295.svg",
+    "static/media/schultzandcologo.svg": "/portfolio_23/static/media/schultzandcologo.459c3733812b71d28f901ab542686904.svg",
+    "index.html": "/portfolio_23/index.html",
+    "main.bb051cf8.css.map": "/portfolio_23/static/css/main.bb051cf8.css.map",
+    "main.36df06be.js.map": "/portfolio_23/static/js/main.36df06be.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bb051cf8.css",
+    "static/js/main.36df06be.js"
+  ]
+}
